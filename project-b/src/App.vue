@@ -4,12 +4,13 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header>
-      <nav class="p-6 bg-[#C4C4C4]">
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/products">Products</RouterLink>
-        <RouterLink to="/about-us">About Us</RouterLink>
-        <RouterLink to="/contact-us">Contact Us</RouterLink>
-        <RouterLink to="/cart">Cart</RouterLink>
+      <nav class="p-6 bg-[#0B0C10] text-[#C4C4C4] font-[32px] font-[600] flex justify-items-start">
+        <RouterLink to="/" class="px-2">Home</RouterLink>
+        <RouterLink to="/products" class="px-2">Products</RouterLink>
+        <RouterLink to="/about-us" class="px-2">About Us</RouterLink>
+        <RouterLink to="/contact-us" class="px-2">Contact Us</RouterLink>
+        <RouterLink to="/cart" class="px-2 justify-self-end">Cart</RouterLink>
+        <RouterLink to="/" class="px-2 justify-self-end"><img src="" alt="logo"></RouterLink>
       </nav>
   </header>
 
