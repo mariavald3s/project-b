@@ -15,21 +15,20 @@
 </template>
 
 <script>
-import { createUser } from '@/firebase'
-import { reactive } from '@vue/reactivity'
-
+// import { createUser } from '@/firebase'
+// import { reactive } from '@vue/reactivity'
 
 export default {
-    setup() {
-        const form = reactive({ name: '', email: ''})
+    // setup() {
+    //     const form = reactive({ name: '', email: ''})
 
-        const onSubmit = async () => {
-            await createUser({ ...form })
-            form.name = ''
-            form.email = ''
-        }
+    //     const onSubmit = async () => {
+    //         await createUser({ ...form })
+    //         form.name = ''
+    //         form.email = ''
+    //     }
 
-        return {form, onSubmit}
-    }
+    //     return {form, onSubmit}
+    // }
 }
 </script>
