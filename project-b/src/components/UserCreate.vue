@@ -3,32 +3,47 @@
         <form>
             <div>
                 <label for="name">Name</label>
-                <input type="text" v-model="form.name" required>
+                <input type="text" v-model="name" required>
             </div>
             <div>
                 <label for="email">Email</label>
-                <input type="email" v-model="form.email" required>
+                <input type="email" v-model="email" required>
             </div>
-            <button type="submit">Create User</button>
+            <button type="submit" @click="createUser">Create User</button>
         </form>
     </div>
 </template>
 
 <script>
-// import { createUser } from '@/firebase'
-// import { reactive } from '@vue/reactivity'
+import { collection, addDoc } from "firebase/firestore"
+// the firestore instance
+import db from '../firebase/init.js'
 
 export default {
-    // setup() {
-    //     const form = reactive({ name: '', email: ''})
+//   created() {
+//     this.createUser()
+//   },
+  data () {
+      return {
+          
+      }
+  },
+  methods: {
+    async createUser() {
+      // 'users' collection reference
+      const colRef = collection(db, 'users')
+      // data to send
+      const dataObj = {
+        firstName: this.name,
+        email: this.email,
+      }
 
-    //     const onSubmit = async () => {
-    //         await createUser({ ...form })
-    //         form.name = ''
-    //         form.email = ''
-    //     }
+      // create document and return reference to it
+      const docRef = await addDoc(colRef, dataObj)
 
-    //     return {form, onSubmit}
-    // }
+      // access auto-generated ID with '.id'
+      console.log('Document was created with ID:', docRef.id)
+    }
+  }
 }
 </script>
