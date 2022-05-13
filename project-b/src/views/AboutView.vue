@@ -7,7 +7,8 @@
   </div>
   <div class="bg-[#C4C4C4] py-8 px-24">
     <div class="flex justify-between" data-aos="fade-right"
-     data-aos-duration="3000">
+    
+     data-aos-duration="500">
       <img src="" alt="photo here" class="self-center" />
       <div class="text-[#202833] pl-20">
         <p class="text-xl font-bold pb-6">Our Story</p>
@@ -40,7 +41,8 @@
 
   <div class="bg-[#202833] py-8 px-24">
     <div class="flex justify-between" data-aos="fade-left"
-     data-aos-duration="3000">
+    
+     data-aos-duration="500">
       <div class="text-[#C4C4C4] pr-20">
         <p class="text-xl font-bold pb-6">Our Employees</p>
         <p class="">
@@ -73,7 +75,8 @@
 
   <div class="bg-[#C4C4C4] py-8 px-24">
     <div class="flex justify-between " data-aos="fade-right"
-     data-aos-duration="3000">
+    
+     data-aos-duration="500">
       <img src="" alt="photo here" class="self-center" />
       <div class="text-[#202833] pl-20">
         <p class="text-xl font-bold pb-6">Our Products</p>

@@ -12,13 +12,13 @@
     </div>
     <p class="p-28 bg-slate-700">Image goes here</p>
   </div>
-  <div class="bg-[#202833] p-6" data-aos="fade-in">
+  <div class="bg-[#202833] p-6">
     <RouterLink
       to="/products"
       class=""
       data-aos="fade-right"
-     data-aos-duration="3000"
-      data-aos-anchor-placement="bottom-bottom"
+     data-aos-duration="500"
+      data-aos-anchor-placement="center-bottom"
     >
       <div class="p-6 bg-[#C4C4C4] rounded-lg hover:bg-[#a7a6a6]">
         <p class="text-center text-xl font-bold text-[#202833] pb-6">
@@ -33,8 +33,8 @@
       to="/contact-us"
       class=""
       data-aos="fade-right"
-     data-aos-duration="3000"
-      data-aos-anchor-placement="bottom-bottom"
+     data-aos-duration="500"
+      data-aos-anchor-placement="center-bottom"
     >
       <div
         class="py-6 px-12 bg-[#C4C4C4] rounded-lg flex justify-between hover:bg-[#a7a6a6]"
@@ -75,8 +75,8 @@
       to="/about-us"
       class=""
       data-aos="fade-right"
-     data-aos-duration="3000"
-      data-aos-anchor-placement="bottom-bottom"
+     data-aos-duration="500"
+      data-aos-anchor-placement="center-bottom"
     >
       <div
         class="py-6 px-12 bg-[#C4C4C4] rounded-lg flex justify-between hover:bg-[#a7a6a6]"
