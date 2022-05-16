@@ -27,5 +27,54 @@
 </template>
 
 <script>
-export default {};
+
+import { collection, addDoc } from "firebase/firestore"
+// the firestore instance
+// import db from '../firebase/init.js'
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getFirestore } from "firebase/firestore";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAIanrnnerrizslf9zSDjkxUYwbDnTDTa0",
+  authDomain: "project-b-a3f82.firebaseapp.com",
+  databaseURL: "https://project-b-a3f82-default-rtdb.firebaseio.com",
+  projectId: "project-b-a3f82",
+  storageBucket: "project-b-a3f82.appspot.com",
+  messagingSenderId: "550718394524",
+  appId: "1:550718394524:web:8923b556a0bac089e41d59",
+  measurementId: "G-8VHJH6LDSX"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const analytics = getAnalytics(app);
+
+
+export default {
+  data () {
+    return {
+      products: ["skatingCard"]
+    }
+  },
+  async mounted () {
+    for (let index = 0; index < this.products.length; index++) {
+    const cityRef = db.collection('products').doc(`${this.products[index]}`);
+    const doc = await cityRef.get();
+    if (!doc.exists) {
+      console.log('No such document!');
+    } else {
+      console.log('Document data:', doc.data());
+    }
+      
+    }
+    
+  }
+
+};
 </script>
