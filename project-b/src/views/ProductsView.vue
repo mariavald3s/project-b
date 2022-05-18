@@ -6,7 +6,7 @@
     <p class="text-center text-[#C4C4C4] pb-4 pt-2">insert descript here</p>
   </div>
   <div class="bg-[#202833] p-3">
-      <div class="m-2">
+      <div class="m-2 grid grid-cols-3 auto-cols-min">
     <ProductCards v-for="product in products" :key="product.id" :name="product.name" :image="product.image" />
     </div>
   </div>
@@ -20,7 +20,7 @@ import ProductCards from "../components/ProductCardsGrey.vue";
 // import {  } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
-import { getFirestore, collection, getDoc, doc } from "firebase/firestore";
+import { getFirestore, collection, getDoc, getDocs, query, doc } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -46,30 +46,33 @@ export default {
   data() {
     return {
       products: [
-        {name: "skatingCard"}
+        // {identity: "skatingCard"}
       ],
     };
   },
   async mounted() {
-    for (let index = 0; index < this.products.length; index++) {
-    // const cityRef = db.collection("products").doc(`${this.products[index]}`);
-    // const doc = await cityRef.get();
-    // if (!doc.exists) {
-    //   console.log("No such document!");
-    // } else {
-    //   console.log("Document data:", doc.data());
-    const docRef = doc(db, "products", `${this.products[index].name}`);
-    const docSnap = await getDoc(docRef);
+  //   for (let index = 0; index < this.products.length; index++) {
+  //   const docRef = doc(db, "products", `${this.products[index].identity}`);
+  //   const docSnap = await getDoc(docRef);
 
-    if (docSnap.exists()) {
-        this.products[index].image = docSnap.data().image;
-      console.log("Document data:", docSnap.data());
-    } else {
-      // doc.data() will be undefined in this case
-      console.log("No such document!" + docSnap);
-    }
-   }
-    // }
+  //   if (docSnap.exists()) {
+  //       this.products[index].image = docSnap.data().image;
+  //       this.products[index].name = docSnap.data().name;
+  //     console.log("Document data:", docSnap.data());
+  //   } else {
+  //     console.log("No such document!" + docSnap);
+  //   }
+  //  }
+
+  
+      // query to get all docs in 'countries' collection
+      const querySnap = await getDocs(query(collection(db, 'products')));
+
+      // add each doc to 'countries' array
+      querySnap.forEach((doc) => {
+        this.products.push(doc.data())
+      })
+
   },
 };
 </script>
