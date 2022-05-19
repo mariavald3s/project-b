@@ -6,7 +6,7 @@
     <p class="text-center text-[#C4C4C4] pb-4 pt-2">insert descript here</p>
   </div>
   <div class="bg-[#202833] p-3">
-      <div class="m-2 grid grid-cols-3 auto-cols-min">
+      <div class="m-2 grid grid-cols-3 auto-cols-min items-start">
     <ProductCards v-for="product in products" :key="product.id" :name="product.name" :image="product.image" />
     </div>
   </div>
