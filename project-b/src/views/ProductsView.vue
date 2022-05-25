@@ -21,6 +21,13 @@ import ProductCards from "../components/ProductCardsGrey.vue";
 import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
 import { getFirestore, collection, getDoc, getDocs, query, doc } from "firebase/firestore";
+
+import { getApp } from "firebase/app";
+import { getStorage } from "firebase/storage";
+
+// Get a non-default Storage bucket
+const firebaseApp = getApp();
+const storage = getStorage(firebaseApp, "gs://project-b-a3f82.appspot.com");
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
