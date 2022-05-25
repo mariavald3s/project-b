@@ -20,11 +20,13 @@
      data-aos-duration="500"
       data-aos-anchor-placement="center-bottom"
     >
-      <div class="p-6 bg-[#C4C4C4] rounded-lg hover:bg-[#a7a6a6]">
+      <div class="p-6 bg-[#C4C4C4] rounded-lg ">
         <p class="text-center text-xl font-bold text-[#202833] pb-6">
           Our Products
         </p>
-        <ProductCards />
+        <div class="m-2 grid grid-cols-5 auto-cols-min items-start gap-4">
+    <ProductCards v-for="product in products" :key="product.id" :name="product.name" :image="product.image" />
+    </div>
       </div>
     </RouterLink>
   </div>
@@ -121,10 +123,51 @@ import ProductCards from "../components/ProductCards.vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+
+// the firestore instance
+// import db from '../firebase/init.js'
+// import {  } from "firebase/firestore";
+import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
+import { getFirestore, collection, getDoc, getDocs, query, doc } from "firebase/firestore";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAIanrnnerrizslf9zSDjkxUYwbDnTDTa0",
+  authDomain: "project-b-a3f82.firebaseapp.com",
+  databaseURL: "https://project-b-a3f82-default-rtdb.firebaseio.com",
+  projectId: "project-b-a3f82",
+  storageBucket: "project-b-a3f82.appspot.com",
+  messagingSenderId: "550718394524",
+  appId: "1:550718394524:web:8923b556a0bac089e41d59",
+  measurementId: "G-8VHJH6LDSX",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
 export default {
   components: { Footer, ProductCards },
-  mounted() {
+  data() {
+    return {
+      products: [
+        // {identity: "skatingCard"}
+      ],
+    };
+  },
+  async mounted() {
     AOS.init();
+     
+      const querySnap = await getDocs(query(collection(db, 'products')));
+
+      querySnap.forEach((doc) => {
+        this.products.push(doc.data())
+      })
+
   },
 };
 </script>
