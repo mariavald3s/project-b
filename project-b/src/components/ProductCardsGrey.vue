@@ -10,14 +10,14 @@
       {{ name }}
     </p>
     <div v-if="clicked" class="px-5 pb-3 flex justify-center flex-col">
-      <p class="flex justify-center">Insert descript here</p>
+      <p class="flex justify-center">{{descript}}</p>
       <button class="snipcart-add-item m-3 p-2 bg-[#FC66A5] rounded-full hover:bg-[#e44c8b]"
-  data-item-id="starry-night"
-  data-item-price="79.99"
+  :data-item-id="name"
+  :data-item-price="price"
   :data-item-url="image"
-  data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+  :data-item-description="descript"
   :data-item-image="image"
-  data-item-name="The Starry Night">
+  :data-item-name="name">
   Add to cart
 </button>
       <!-- <button class="m-3 p-2 bg-[#FC66A5] rounded-full">Add to Cart</button> -->
@@ -112,7 +112,7 @@ window.SnipcartSettings = {
 })();
 
 export default {
-  props: ["name", "image"],
+  props: ["name", "image", "price", "descript"],
   data() {
     return {
       clicked: false,

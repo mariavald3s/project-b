@@ -9,7 +9,7 @@
     <div class="flex justify-between" data-aos="fade-right"
     
      data-aos-duration="500">
-      <img src="" alt="photo here" class="self-center" />
+      <img src="src\assets\splashWeb\cards\softcopy\Christmas\Meditation\Original Scan Meditation.jpeg" alt="photo here" class="self-center" width="400" hieght="400"/>
       <div class="text-[#202833] pl-20">
         <p class="text-xl font-bold pb-6">Our Story</p>
         <p class="">
@@ -69,7 +69,7 @@
           at. Vivamus nec imperdiet lectus.
         </p>
       </div>
-      <img src="" alt="photo here" class="self-center" />
+      <img src="src\assets\splashWeb\cards\softcopy\Christmas\Challenge\Original Scan Challenge .jpeg" alt="photo here" class="self-center" width="400" hieght="400"/>
     </div>
   </div>
 
@@ -77,7 +77,7 @@
     <div class="flex justify-between " data-aos="fade-right"
     
      data-aos-duration="500">
-      <img src="" alt="photo here" class="self-center" />
+      <img src="src\assets\splashWeb\cards\softcopy\Christmas\Big Moon\Integration Card.jpg" alt="photo here" class="self-center" width="400" hieght="400"/>
       <div class="text-[#202833] pl-20">
         <p class="text-xl font-bold pb-6">Our Products</p>
         <p class="">

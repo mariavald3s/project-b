@@ -7,7 +7,7 @@
   </div>
   <div class="bg-[#202833] p-3">
       <div class="m-2 grid grid-cols-3 auto-cols-min items-start">
-    <ProductCards v-for="product in products" :key="product.id" :name="product.name" :image="product.image" />
+    <ProductCards v-for="product in products" :key="product.id" :name="product.name" :image="product.image" :price="product.price" :descript="product.descript"/>
     </div>
   </div>
 </template>
@@ -23,11 +23,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDoc, getDocs, query, doc } from "firebase/firestore";
 
 import { getApp } from "firebase/app";
-import { getStorage } from "firebase/storage";
+import { getStorage, ref } from "firebase/storage";
 
 // Get a non-default Storage bucket
 const firebaseApp = getApp();
 const storage = getStorage(firebaseApp, "gs://project-b-a3f82.appspot.com");
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
