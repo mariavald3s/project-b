@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#0B0C10] p-2">
+  <div class="bg-[#0B0C10] px-2 pb-2 pt-20">
     <div class="mt-2 mb-6 mx-28 rounded-lg border-8 border-[#FC66A5] p-3">
       <p class="py-2 text-center text-[#FC66A5] font-bold text-2xl">
         Contact Us

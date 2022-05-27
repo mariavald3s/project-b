@@ -88,7 +88,7 @@ window.SnipcartSettings = {
 
 <template>
   <header>
-      <nav class="p-6 bg-[#0B0C10] text-[#C4C4C4] font-[32px] font-[600] flex justify-between">
+      <nav class="p-6 bg-[#0B0C10] text-[#C4C4C4] font-[32px] font-[600] flex justify-between fixed w-screen z-20">
         <div>
         <RouterLink to="/" class="px-2 hover:text-[#e4e4e4]">Home</RouterLink>
         <RouterLink to="/products" class="px-2 hover:text-[#e4e4e4]">Products</RouterLink>

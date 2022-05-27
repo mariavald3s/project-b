@@ -1,6 +1,6 @@
 <template>
   <div
-    class="text-[#C4C4C4] bg-[#202833] rounded-lg overflow-hidden hover:bg-[#39485c]"
+    class="text-[#C4C4C4] bg-[#202833] rounded-lg overflow-hidden hover:bg-[#39485c] drop-shadow-md"
   >
    <img :src="image" alt="product image" class="h-full w-full"/>
     <p class="p-2">{{name}}</p>

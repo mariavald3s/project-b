@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#0B0C10] p-2">
+  <div class="bg-[#0B0C10] px-2 pb-2 pt-20">
     <div class="mt-2 mb-6 mx-28 rounded-lg border-8 border-[#FC66A5] p-3">
       <p class="py-2 text-center text-[#FC66A5] font-bold text-2xl">About Us</p>
     </div>
@@ -9,8 +9,8 @@
     <div class="flex justify-between" data-aos="fade-right"
     
      data-aos-duration="500">
-      <img src="src\assets\splashWeb\cards\softcopy\Christmas\Meditation\Original Scan Meditation.jpeg" alt="photo here" class="self-center" width="400" hieght="400"/>
-      <div class="text-[#202833] pl-20">
+      <img src="src\assets\splashWeb\cards\softcopy\Christmas\Meditation\Original Scan Meditation.jpeg" alt="photo here" class="self-center rounded-md" width="400" hieght="400"/>
+      <div class="text-[#202833] pl-20 grid grid-cols-1 content-center">
         <p class="text-xl font-bold pb-6">Our Story</p>
         <p class="">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia
@@ -43,7 +43,7 @@
     <div class="flex justify-between" data-aos="fade-left"
     
      data-aos-duration="500">
-      <div class="text-[#C4C4C4] pr-20">
+      <div class="text-[#C4C4C4] pr-20 grid grid-cols-1 content-center">
         <p class="text-xl font-bold pb-6">Our Employees</p>
         <p class="">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia
@@ -69,7 +69,7 @@
           at. Vivamus nec imperdiet lectus.
         </p>
       </div>
-      <img src="src\assets\splashWeb\cards\softcopy\Christmas\Challenge\Original Scan Challenge .jpeg" alt="photo here" class="self-center" width="400" hieght="400"/>
+      <img src="src\assets\splashWeb\cards\softcopy\Christmas\Challenge\Original Scan Challenge .jpeg" alt="photo here" class="self-center rounded-md" width="400" hieght="400"/>
     </div>
   </div>
 
@@ -77,8 +77,8 @@
     <div class="flex justify-between " data-aos="fade-right"
     
      data-aos-duration="500">
-      <img src="src\assets\splashWeb\cards\softcopy\Christmas\Big Moon\Integration Card.jpg" alt="photo here" class="self-center" width="400" hieght="400"/>
-      <div class="text-[#202833] pl-20">
+      <img src="src\assets\splashWeb\cards\softcopy\Christmas\Big Moon\Integration Card.jpg" alt="photo here" class="self-center rounded-md" width="400" hieght="400"/>
+      <div class="text-[#202833] pl-20 grid grid-cols-1 content-center">
         <p class="text-xl font-bold pb-6">Our Products</p>
         <p class="">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia

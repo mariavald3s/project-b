@@ -1,7 +1,7 @@
 <template>
   <div
     @click="showDescript"
-    class="text-[#0B0C10] bg-[#C4C4C4] rounded-lg overflow-hidden hover:bg-[#a7a6a6] m-3"
+    class="text-[#0B0C10] bg-[#C4C4C4] rounded-lg overflow-hidden hover:bg-[#a7a6a6] m-3 drop-shadow-md"
   >
   <div >
     <img :src="image" alt="product image" class="h-full w-full"/>

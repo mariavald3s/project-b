@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#0B0C10] p-2">
+  <div class="bg-[#0B0C10] px-2 pb-2 pt-20">
     <div class="mt-2 mb-6 mx-28 rounded-lg border-8 border-[#FC66A5] p-3">
       <p class="py-2 text-center text-[#FC66A5] font-bold text-2xl">Products</p>
     </div>
@@ -10,10 +10,12 @@
     <ProductCards v-for="product in products" :key="product.id" :name="product.name" :image="product.image" :price="product.price" :descript="product.descript"/>
     </div>
   </div>
+  <Footer />
 </template>
 
 <script>
 import ProductCards from "../components/ProductCardsGrey.vue";
+import Footer from "../components/Footer.vue";
 
 // the firestore instance
 // import db from '../firebase/init.js'
@@ -49,7 +51,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 export default {
-  components: { ProductCards },
+  components: { ProductCards, Footer },
 
   data() {
     return {
