@@ -22,9 +22,9 @@
       <div class="flex justify-end p-1">
           <p class="text-[#FC66A5] font-bold">Check us out on social media!</p>
           <div class="flex px-2">
-            <a href="https://instagram.com"><img src="src\assets\instagram-free-icon-font.png" alt="instagram" class="px-1"></a>
-              <a href="https://twitter.com"><img src="src\assets\twitter-free-icon-font.png" alt="twitter" class="px-1"></a>
-              <a href="https://youtube.com"><img src="src\assets\youtube-free-icon-font.png" alt="youtube" class="pl-1"></a>
+            <a href="https://instagram.com"><img src="../assets/instagram-free-icon-font.png" alt="instagram" class="px-1"></a>
+              <a href="https://twitter.com"><img src="../assets/twitter-free-icon-font.png" alt="twitter" class="px-1"></a>
+              <a href="https://youtube.com"><img src="../assets/youtube-free-icon-font.png" alt="youtube" class="pl-1"></a>
               
           </div>
     </div>
